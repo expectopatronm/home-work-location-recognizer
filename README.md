@@ -4,6 +4,8 @@ This project explores how a person's likely home and work locations can be infer
 
 The notebook turns those raw stops into a behavioral map. It parses the location history, computes movement statistics, supports noisy location lookup, and then uses unsupervised spatial clustering to separate likely home areas from likely work areas.
 
+![Detected home and work location clusters](assets/home-work-clusters-1.png)
+
 ## What The Project Does
 
 The core idea is that home and work are not just coordinates. They are patterns in time and space.
@@ -69,6 +71,8 @@ DBSCAN is a good fit here because it can use geographic distance directly, does 
 
 The notebook includes map and scatter visualizations to make the inferred clusters inspectable. It uses `matplotlib`, `Basemap`, and cluster labels to show how the likely home and work locations are distributed.
 
+![Refined geospatial clusters](assets/home-work-clusters-2.png)
+
 ## Why This Is Useful
 
 This project is a compact demonstration of mobility-pattern mining. With only stationary GPS points and timestamps, it can infer meaningful places in someone's life without labeled training data.
@@ -92,4 +96,3 @@ Any real-world use of this kind of analysis should be privacy-first. Home and wo
 - DBSCAN clustering
 - outlier-resistant location inference
 - geospatial visualization
-
